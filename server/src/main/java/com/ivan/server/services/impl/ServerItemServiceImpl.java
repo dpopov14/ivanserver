@@ -4,6 +4,7 @@ import com.ivan.server.repositories.ServerItemRepository;
 import com.ivan.server.services.ServerItemService;
 import com.ivan.server.entities.ErrorStatus;
 import com.ivan.server.entities.ServerItem;
+import jakarta.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,7 @@ import java.util.Random;
 public class ServerItemServiceImpl implements ServerItemService {
 
     @Autowired ServerItemRepository serverItemRepository;
+
     @Override
     public HttpStatus getStatus(Integer id) {
         Random random = new Random();
